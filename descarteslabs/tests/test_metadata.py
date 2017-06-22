@@ -174,6 +174,8 @@ class TestMetadata(unittest.TestCase):
             self.assertLessEqual(current, last)
 
     def test_search_scrolled_pages(self):
+        # This test will run until killed without the new version of metadata service released.
+        self.assertTrue(False)
         page_size = 5
         pages = self.instance.search(
                 start_time='2016-07-06',
