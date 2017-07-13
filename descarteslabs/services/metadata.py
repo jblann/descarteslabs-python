@@ -97,27 +97,27 @@ class Metadata(Service):
                 [{'Orbit': 'sun-synchronous',
                     'Spectral Bands': '6',
                     'description': 'Landsat 5 thematic mapper imagery, processed by Descartes '
-                                'Labs into Top-of-atmosphere-reflectance.\\n'
-                                '\\n'
+                                'Labs into Top-of-atmosphere-reflectance.\n'
+                                '\n'
                                 'Landsat 5 was a low Earth orbit satellite launched on March '
                                 '1, 1984 to collect imagery of the surface of Earth. A '
                                 'continuation of the Landsat Program, Landsat 5 was jointly '
                                 'managed by the U.S. Geological Survey (USGS) and the '
                                 'National Aeronautics and Space Administration (NASA). Data '
                                 "from Landsat 5 was collected and distributed from the USGS's "
-                                'Center for Earth Resources Observation and Science (EROS).\\n'
+                                'Center for Earth Resources Observation and Science (EROS).\n'
                                 'After 29 years in space, Landsat 5 was officially '
                                 'decommissioned on June 5, 2013.[2] Near the end of its '
                                 "mission, Landsat 5's use was hampered by equipment failures, "
                                 'and it was largely superseded by Landsat 7 and Landsat 8 '
                                 'Mission scientists anticipated the satellite will re-enter '
-                                "Earth's atmosphere and disintegrate around 2034.\\n"
-                                ' \\n'
+                                "Earth's atmosphere and disintegrate around 2034.\n"
+                                ' \n'
                                 'This information uses material from the Wikipedia article <a '
                                 'href="https://en.wikipedia.org/wiki/Landsat_5">"Landsat_5"</a>, '
                                 'which is released under the <a '
                                 'href="https://creativecommons.org/licenses/by-sa/3.0/">Creative '
-                                'Commons Attribution-Share-Alike License 3.0</a>.\\n',
+                                'Commons Attribution-Share-Alike License 3.0</a>.\n',
                     'end_date': '11/1/2011',
                     'native_bands': ['red', 'green', 'blue', 'nir', 'swir1', 'swir2'],
                     'orbit': 'sun-synchronous',
