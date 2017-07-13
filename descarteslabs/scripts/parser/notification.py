@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Copyright 2017 Descartes Labs.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,8 +13,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# flake8: noqa
-from .metadata import Metadata
-from .notification import Notification
-from .places import Places
-from .raster import Raster
+from __future__ import print_function
+import json
+
+import descarteslabs as dl
+
+
+def notification_handler(args):
+    notification = dl.notification
+
+    if args.url:
+        notification.url = args.url
+
+    kwargs = {}
+
+    if args.command == 'notify':
+
+        with open(args.argument) as fp:
+    
+            data = json.load(fp)
+
+            notification.notify(data)
+
+            print('notification sent!')

@@ -19,9 +19,11 @@ from .auth import Auth
 descartes_auth = Auth()
 
 from .services.metadata import Metadata
+from .services.notification import Notification
 from .services.places import Places
 from .services.raster import Raster
 
 metadata = Metadata()
+notification = Notification()
 places = Places()
 raster = Raster()

@@ -19,6 +19,7 @@ import argparse
 
 from descarteslabs.scripts.parser.auth import auth_handler
 from descarteslabs.scripts.parser.metadata import metadata_handler
+from descarteslabs.scripts.parser.notification import notification_handler
 from descarteslabs.scripts.parser.raster import scales, raster_handler
 from descarteslabs.scripts.parser.places import places_handler
 
@@ -51,6 +52,12 @@ metadata_parser.add_argument('-offset', help='Number of items to skip (default 0
 metadata_parser.add_argument('-bbox', help='Whether or not to use a bounding box filter (default: false)',
                              action='store_true')
 
+# Notification Group
+notification_parser = subparsers.add_parser('notification')
+notification_parser.add_argument('command', choices=['notify'], help='The action to take')
+notification_parser.add_argument('-url', help='The url of the service')
+notification_parser.add_argument('argument', nargs='?')
+
 # Places Group
 places_parser = subparsers.add_parser('places')
 places_parser.add_argument('command', choices=['find', 'shape', 'prefix', 'placetypes'],
@@ -82,6 +89,8 @@ def handle(args):
         auth_handler(args)
     elif args.group == "metadata":
         metadata_handler(args)
+    elif args.group == "notification":
+        notification_handler(args)
     elif args.group == "places":
         places_handler(args)
     elif args.group == "raster":
