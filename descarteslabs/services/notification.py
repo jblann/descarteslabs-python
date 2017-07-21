@@ -29,9 +29,13 @@ class Notification(Service):
         """
         if url is None:
             url = os.environ.get("DESCARTESLABS_NOTIFY_URL", "https://platform-services-dev.descarteslabs.com/notification/dev")
-
+            
         Service.__init__(self, url, token)
 
+    def identify(self):
+        r = self.session.get('/identify/')
+        return r.cookies['sessionid']
+        
     def notify(self, kwargs):
         r = self.session.post('/post/', json=kwargs)
-        return r.text
+        return r.json()

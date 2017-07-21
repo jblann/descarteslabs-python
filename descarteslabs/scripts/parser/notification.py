@@ -27,6 +27,10 @@ def notification_handler(args):
 
     kwargs = {}
 
+    if args.command == 'identify':
+        result = notification.identify()
+        print(result)
+        
     if args.command == 'notify':
 
         with open(args.argument) as fp:
